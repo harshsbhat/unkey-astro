@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Unkey with Astro.">
 	<main>
 		<svg
 			class="astro-a"
@@ -33,31 +33,36 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1><span class="text-gradient">Unkey</span> with Astro</h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			This app demonstrates <strong>@unkey/ratelimit</strong> and how you can ratelimit your astro routes.
+			Try the following curl request. The route is rate limited for 3 requests per 30 seconds. 
 		</p>
+
+		<p class="code-snippet">
+			<code>curl http://localhost:4321/api/ratelimited</code>
+		</p>
+		
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
+				href="https://unkey.com/docs/"
 				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				body="Learn more about Unkey"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="https://www.unkey.com/templates"
+				title="Unkey Templates"
+				body="More Unkey Templates like this"
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="https://github.com/unkeyed/unkey/"
+				title="Github"
+				body="Star Unkey on Github. ⭐"
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="https://unkey.com/discord"
+				title="Discord"
+				body="Join Unkey Discord community. ❤️"
 			/>
 		</ul>
 	</main>
@@ -103,13 +108,14 @@ import Card from '../components/Card.astro';
 		padding: 1.5rem;
 		border-radius: 8px;
 	}
-	.instructions code {
+	
+	.code-snippet {
 		font-size: 0.8em;
 		font-weight: bold;
 		background: rgba(var(--accent-light), 12%);
 		color: rgb(var(--accent-light));
 		border-radius: 4px;
-		padding: 0.3em 0.4em;
+		padding: 15px;
 	}
 	.instructions strong {
 		color: rgb(var(--accent-light));

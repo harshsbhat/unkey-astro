@@ -11,6 +11,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.4
         version: 0.9.4(typescript@5.6.3)
+      '@unkey/ratelimit':
+        specifier: ^0.4.5
+        version: 0.4.5
       astro:
         specifier: ^4.16.6
         version: 4.16.6(rollup@4.24.0)(typescript@5.6.3)
@@ -595,6 +598,18 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@unkey/api@0.26.2':
+    resolution: {integrity: sha512-huHF5AbX1NL2MJHSfsO1mB9CSA1CgTlgdPUGZgYCll3BOCKRneYiZ2GgYGiWFbtYaUimjaZgHyGnH9fpQlDFjA==}
+
+  '@unkey/error@0.2.0':
+    resolution: {integrity: sha512-DFGb4A7SrusZPP0FYuRIF0CO+Gi4etLUAEJ6EKc+TKYmscL0nEJ2Pr38FyX9MvjI4Wx5l35Wc9KsBjMm9Ybh7w==}
+
+  '@unkey/ratelimit@0.4.5':
+    resolution: {integrity: sha512-L/Qlxm9rjPfawCmTBZfzR+mwtRy/njcKuYHQK7qJ5AnlTGqzHmHk5aW7K9z9hzEz/USm7E+zLwFnjzsvXTWGlw==}
+
+  '@unkey/rbac@0.3.1':
+    resolution: {integrity: sha512-Hj+52XRIlBBl3/qOUq9K71Fwy3PWExBQOpOClVYHdrcmbgqNL6L4EdW/BzliLhqPCdwZTPVSJTnZ3Hw4ZYixsQ==}
 
   '@volar/kit@2.4.6':
     resolution: {integrity: sha512-OaMtpmLns6IYD1nOSd0NdG/F5KzJ7Jr4B7TLeb4byPzu+ExuuRVeO56Dn1C7Frnw6bGudUQd90cpQAmxdB+RlQ==}
@@ -2392,6 +2407,23 @@ snapshots:
   '@types/unist@3.0.3': {}
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@unkey/api@0.26.2':
+    dependencies:
+      '@unkey/rbac': 0.3.1
+
+  '@unkey/error@0.2.0':
+    dependencies:
+      zod: 3.23.8
+
+  '@unkey/ratelimit@0.4.5':
+    dependencies:
+      '@unkey/api': 0.26.2
+
+  '@unkey/rbac@0.3.1':
+    dependencies:
+      '@unkey/error': 0.2.0
+      zod: 3.23.8
 
   '@volar/kit@2.4.6(typescript@5.6.3)':
     dependencies:
