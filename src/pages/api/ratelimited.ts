@@ -2,8 +2,10 @@ import type { APIRoute } from 'astro';
 import { unkey } from "../../lib/unkey";
 
 export const GET: APIRoute = async ({ request }) => {
-  const ipAddress = request.headers.get("x-forwarded-for") ?? "anonymous"
-  const ratelimit = await unkey.limit(ipAddress);
+  
+  // This is a random UserId Completely fake. If you don't have a UserId you can use any unique identifier here.
+  const userId = "userId_BYDjLrSNxkoGI33gfDDLc+ZYwTUGGfsVFEkCQ"
+  const ratelimit = await unkey.limit(userId);
 
   if (!ratelimit.success) {
     return new Response("Try again later", { status: 429 });
