@@ -21,7 +21,7 @@ export const GET: APIRoute = async ({ request }) => {
       }
     );
   }
-
+  else {
     return new Response(
       JSON.stringify({
         message: "Ratelimited route here",
@@ -34,5 +34,5 @@ export const GET: APIRoute = async ({ request }) => {
         },
       }
     );
-
+  }
 };  

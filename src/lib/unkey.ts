@@ -4,6 +4,6 @@ export const unkey = new Ratelimit({
   rootKey: import.meta.env.UNKEY_ROOT_KEY,
   namespace: "astro.example",
   limit: 3,
-  duration: "120s",
+  duration: "60s",
   async: true
 })
