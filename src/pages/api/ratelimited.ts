@@ -8,9 +8,20 @@ export const GET: APIRoute = async ({ request }) => {
   const ratelimit = await unkey.limit(userId);
 
   if (!ratelimit.success) {
-    return new Response("Try again later", { status: 429 });
+    return new Response(
+      JSON.stringify({
+        message: "Try again later",
+        ratelimit: ratelimit,
+      }),
+      {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
   }
-  else {
+
     return new Response(
       JSON.stringify({
         message: "Ratelimited route here",
@@ -23,6 +34,5 @@ export const GET: APIRoute = async ({ request }) => {
         },
       }
     );
-  }
 
 };  
