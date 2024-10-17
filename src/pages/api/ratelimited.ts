@@ -15,4 +15,4 @@ export const GET: APIRoute = async ({ request }) => {
       'Content-Type': 'text/plain',
     },
   });
-};
+};  
