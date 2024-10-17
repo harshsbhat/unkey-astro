@@ -1,6 +1,6 @@
 # Ratelimit Astro routes using Unkey
 
-This app demonstrates @unkey/ratelimit and how you can rate limit your astro routes. Try the following curl request. The route is rate-limited for 3 requests per 30 seconds.
+This app demonstrates @unkey/ratelimit and how you can rate limit your astro routes. Try the following curl request. The route is rate-limited for 3 requests per 10 minutes.
 
 ## Prerequisites
 
@@ -39,8 +39,8 @@ Create an account with [Unkey](https://app.unkey.com/)
 
 ## Usage
 
-Try making requests to the ratelimited route. It should only allow 3 requests per 30 seconds:
+Try making requests to the ratelimited route. It should only allow 3 requests per 10 minutes:
 
 ```bash
-curl http://localhost:4321/api/ratelimited
+curl https://unkey-astro.vercel.app/api/ratelimited
 ```
