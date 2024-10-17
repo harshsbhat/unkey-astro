@@ -8,14 +8,21 @@ export const GET: APIRoute = async ({ request }) => {
   if (!ratelimit.success) {
     return new Response("Try again later", { status: 429 });
   }
-  if (ratelimit.success){
-  return new Response("Protected route accessed", {
-    status: 200,
-    headers: {
-      'Content-Type': 'text/plain',
-    },
-  });
-}
+  if (ratelimit.success) {
+    return new Response(
+      JSON.stringify({
+        message: "Ratelimited route here",
+        ratelimit: ratelimit,
+      }),
+      {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+  }
+  
   else {
     return new Response("INTERNAL SERVER ERROR", { status: 500 });
   }
