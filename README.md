@@ -2,6 +2,9 @@
 
 This app demonstrates @unkey/ratelimit and how you can rate limit your astro routes. Try the following curl request. The route is rate-limited for 3 requests per 30 seconds .
 
+![image](https://github.com/user-attachments/assets/4b57ed33-e0d8-4c10-b5d7-012e87913393)
+
+
 ## Prerequisites
 
 Create an account with [Unkey](https://app.unkey.com/)
