@@ -42,5 +42,5 @@ Create an account with [Unkey](https://app.unkey.com/)
 Try making requests to the ratelimited route. It should only allow 3 requests per 30 seconds:
 
 ```bash
-curl https://unkey-astro.vercel.app/api/ratelimited
+curl http://localhost:4321/api/ratelimited
 ```
